@@ -1,16 +1,16 @@
 pipeline {
-  agent { docker 'node:8.8' }
+  agent any
   stages {
     stage('build') {
       steps {
-        sh 'npm -v'
+        sh 'echo one'
       }
     }
   }
   post {
     always {
       junit 'build/reports/**/*.xml'
-      sh 'echo wat'
+      sh 'echo two'
     }
   }
 }
