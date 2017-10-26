@@ -12,4 +12,5 @@ pipeline {
       junit 'build/reports/**/*.xml'
       sh 'echo wat'
     }
+  }
 }
